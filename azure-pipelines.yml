@@ -11,7 +11,7 @@ steps:
   - checkout: self
     submodules: true
     
-- task: AzureWebApp@1
+  - task: AzureWebApp@1
   inputs:
     azureSubscription: 'Cobani Deployment - EYDEV - Azure Policies'
     appType: 'webApp'
