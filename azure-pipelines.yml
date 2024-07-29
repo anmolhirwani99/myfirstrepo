@@ -11,7 +11,7 @@ steps:
   - checkout: self
     submodules: true
   - task: AzureWebApp@1
-  inputs:
+   inputs:
     azureSubscription: 'Cobani Deployment - EYDEV - Azure Policies'
     appType: 'webApp'
     appName: 'my-web-app'
@@ -19,5 +19,5 @@ steps:
     deploymentMethod: 'auto'
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
-  
+   displayName: 'Run a multi-line script'
+
