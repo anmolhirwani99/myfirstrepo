@@ -10,11 +10,14 @@ pool:
 steps:
   - checkout: self
     submodules: true
-  - task: AzureStaticWebApp@0
-    inputs:
-      app_location: '/'
-      api_location: 'api'
-      output_location: ''
-    env:
-      azure_static_web_apps_api_token: $(deployment_token)
-
+  - task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'Cobani Deployment - EYDEV - Azure Policies'
+    appType: 'webApp'
+    appName: 'my-web-app'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    deploymentMethod: 'auto'
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
+  
