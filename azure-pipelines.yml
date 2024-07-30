@@ -12,7 +12,7 @@ steps:
     submodules: true
   - task: AzureStaticWebApp@0
     inputs:
-      app_location: '/'
+      app_location: '/src'
       api_location: 'api'
       output_location: ''
     env:
